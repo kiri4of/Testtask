@@ -13,7 +13,10 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let mainCoordinator = MainCoordinator(navigationController: navigationController)
-        mainCoordinator.start()
+        let tabBarCoordinator = TabBarCoordinator(navigationController: navigationController)
+        tabBarCoordinator.start()
+        
+//        let mainCoordinator = MainCoordinator(navigationController: navigationController)
+//        mainCoordinator.start()
     }
 }
