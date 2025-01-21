@@ -3,7 +3,6 @@ import UIKit
 
 class MainViewController: BaseViewController<MainView> {
     private var viewModel: MainViewModel
-    var coordinator: MainCoordinator?
     
     init(mainView: MainView, viewModel: MainViewModel) {
         self.viewModel = viewModel
@@ -17,9 +16,8 @@ class MainViewController: BaseViewController<MainView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        viewModel.viewDidLoad()
         bindViewModel()
-       
+        viewModel.fetchUsers()
     }
     
     private func setupTableView() {
@@ -28,9 +26,17 @@ class MainViewController: BaseViewController<MainView> {
     }
     
     private func bindViewModel() {
-        viewModel.updateMainScreenData = { [weak self] usersUI in
-            guard let self = self else { return }
+        viewModel.updateMainScreenData = { [weak self] in
+            guard let self = self else {return}
             DispatchQueue.main.async {
+                //if there no users
+                if self.viewModel.numberOfUsers() > 0 {
+                    self.mainView.tableView.backgroundView = nil
+                } else {
+                    let imageView = UIImageView(image: UIImage(named: "noNetworkBgImage"))
+                    imageView.contentMode = .scaleAspectFit
+                    self.mainView.tableView.backgroundView = imageView
+                }
                 self.mainView.tableView.reloadData()
             }
         }
@@ -51,6 +57,7 @@ class MainViewController: BaseViewController<MainView> {
     }
 }
 
+//MARK: - TableView DataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfUsers()

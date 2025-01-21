@@ -15,21 +15,21 @@ class MainTableViewCell: UITableViewCell {
     
     private let nameLabel: UILabel = {
        let label = UILabel()
-        label.font = AppFonts.nunitoSans18Regular
+        label.font = AppFonts.nunito18Regular
         label.textColor = .black
         return label
     }()
     
     private let positionLabel: UILabel = {
        let label = UILabel()
-        label.font = AppFonts.nunitoSans14Regular
+        label.font = AppFonts.nunito14Regular
         label.textColor = .black.withAlphaComponent(0.6)
         return label
     }()
     
     private let emailLabel: UILabel = {
        let label = UILabel()
-        label.font = AppFonts.nunitoSans14Regular
+        label.font = AppFonts.nunito14Regular
         label.textColor = .black
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
@@ -38,7 +38,7 @@ class MainTableViewCell: UITableViewCell {
     
     private let phoneNumberLabel: UILabel = {
        let label = UILabel()
-        label.font = AppFonts.nunitoSans14Regular
+        label.font = AppFonts.nunito14Regular
         label.textColor = .black
         return label
     }()

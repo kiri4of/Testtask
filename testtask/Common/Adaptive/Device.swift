@@ -1,5 +1,6 @@
 import Foundation
 
+//List of devices size
 enum Device {
     case iPhoneXR
     case iPhone11

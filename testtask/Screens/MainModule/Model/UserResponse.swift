@@ -1,6 +1,7 @@
 
 import Foundation
 
+//API Model 
 struct UsersResponse: Decodable {
     let success: Bool
     let total_pages: Int

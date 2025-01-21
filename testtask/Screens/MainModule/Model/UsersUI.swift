@@ -1,6 +1,7 @@
 
 import Foundation
 
+//UI Model 
 struct UsersUI {
     let name: String
     let email: String

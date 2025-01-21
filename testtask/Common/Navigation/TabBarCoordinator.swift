@@ -1,27 +1,33 @@
 
 import UIKit
 
-class TabBarCoordinator: Coordinator {
-    var navigationController: UINavigationController
-    var tabBarController: UITabBarController
-    
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-        self.tabBarController = UITabBarController()
-    }
+class TabBarCoordinator {
+    var tabBarController = UITabBarController()
     
     func start() {
-        setupTabBarController()
-        navigationController.viewControllers = [tabBarController]
+        let mainVC = MainScreenBuilder.createMainViewController()
+        mainVC.mainView.backgroundColor = .white
+        let secondVC = MainScreenBuilder.createMainViewController()
+        
+        //icons
+        mainVC.tabBarItem = UITabBarItem(title: "", image: AppImages.users, tag: 0)
+        secondVC.tabBarItem = UITabBarItem(title: "", image: AppImages.signUp, tag: 1)
+        
+        tabBarController.viewControllers = [mainVC,secondVC]
+        
+        //custom
+        tabBarController.tabBar.tintColor = AppColors.tabBarTintColor
+        tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.backgroundColor = AppColors.tabBarBgColor
+        
+        
     }
     
     private func setupTabBarController() {
-        let mainCoordinator = MainCoordinator(navigationController: navigationController)
         let mainVC = MainScreenBuilder.createMainViewController()
         mainVC.mainView.backgroundColor = .white
         
         //Future
-        let secondCoordinator = MainCoordinator(navigationController: navigationController)
         let secondVC = MainScreenBuilder.createMainViewController()
         secondVC.mainView.backgroundColor = .white
         
@@ -35,7 +41,6 @@ class TabBarCoordinator: Coordinator {
         tabBarController.tabBar.tintColor = AppColors.tabBarTintColor
         tabBarController.tabBar.isTranslucent = false
         tabBarController.tabBar.backgroundColor = AppColors.tabBarBgColor
-        
         tabBarController.viewControllers = [firstNavController, secondNavController]
     
     }

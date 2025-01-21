@@ -7,32 +7,26 @@ final class MainViewModel {
     private var users = [UsersUI]()
     
     var displayError: ((String) -> Void)?
-    var updateMainScreenData: (([UsersUI]) -> Void)?
+    var updateMainScreenData: (() -> Void)?
     
     init(network: APIManagerProtocol) {
         self.network = network
     }
     
-    func viewDidLoad() {
-        getUsers(page: 1, count: 5) { data in
-            self.users = data
-            self.updateMainScreenData?(data)
-        }
-    }
-    
-    private func getUsers(page: Int, count: Int, completion: @escaping ([UsersUI]) -> Void) {
-        network.makeRequest(for: MainEndpoint.getUsers(page: page, count: count)) { [weak self] (result: ModelFromRequest) in
-            guard let self = self else { return }
-            switch result {
-            case .success(let response):
-                let usersUI = response.users.map{ UsersUI(apiModel: $0) }
-      
-                completion(usersUI)
-            case .failure(let error):
-                checkAPIError(apiError: error)
-            }
-        }
-    }
+    func fetchUsers() {
+           network.makeRequest(for: MainEndpoint.getUsers(page: 1, count: 10))
+        { [weak self] (result: ModelFromRequest) in
+               guard let self = self else { return }
+               
+               switch result {
+               case .success(let response):
+                   self.users = response.users.map { UsersUI(apiModel: $0) }
+                   self.updateMainScreenData?()
+               case .failure(let error):
+                   self.checkAPIError(apiError: error)
+               }
+           }
+       }
     
     private func checkAPIError(apiError: APIError) {
          displayError?(apiError.displayMessage)

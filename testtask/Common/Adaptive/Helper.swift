@@ -1,8 +1,9 @@
 import UIKit
-
+// Current dimension
 var dimension: Dimension {
     UIDevice.current.orientation.isPortrait ? .width : .height
 }
+
 
 func resized(size: CGSize, baseOn dimension: Dimension) -> CGSize {
     let screenWidth = UIScreen.main.bounds.size.width

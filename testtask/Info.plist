@@ -6,8 +6,6 @@
 	<array>
 		<string>Nunito-Regular.ttf</string>
 		<string>Nunito-SemiBold.ttf</string>
-		<string>NunitoSans_10pt-Regular.ttf</string>
-		<string>NunitoSans_10pt-SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
