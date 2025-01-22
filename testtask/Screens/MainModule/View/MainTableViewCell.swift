@@ -68,8 +68,8 @@ class MainTableViewCell: UITableViewCell {
         contentView.addSubview(phoneNumberLabel)
         
         avatarImageView.snp.makeConstraints { make in
-                  make.size.equalTo(50)
-                  make.centerY.equalToSuperview()
+                  make.size.equalTo(adapted(dimensionSize: 50, to: dimension))
+                  make.top.equalToSuperview().offset(8)
                   make.leading.equalToSuperview().offset(16)
               }
               

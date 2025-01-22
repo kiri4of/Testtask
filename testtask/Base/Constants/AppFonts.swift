@@ -13,7 +13,7 @@ enum Nunito {
 
 enum AppFonts {
     // Nunito Fonts
-
+    static let nunito24Regular = Nunito.regular(size: 24)
     static let nunito20Regular = Nunito.regular(size: 20)
     static let nunito18Regular = Nunito.regular(size: 18)
     static let nunito16Regular = Nunito.regular(size: 16)

@@ -14,7 +14,7 @@ class CustomHeaderView: UIView {
     init(title text: String) {
         super.init(frame: .zero)
         self.mainLabel.text = text
-        self.backgroundColor = .yellow
+        self.backgroundColor = AppColors.headerBgColor
         setupView()
     }
     

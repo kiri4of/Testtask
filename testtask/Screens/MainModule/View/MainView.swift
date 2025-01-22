@@ -25,6 +25,8 @@ class MainView: UIView {
 
 extension MainView {
     private func setupView() {
+        backgroundColor = .white
+        
         addSubview(headerView)
         addSubview(tableView)
         

@@ -41,6 +41,12 @@
 		F7F6B57C2D3EC6C900FED48A /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */; };
 		F7F6B5842D401CA400FED48A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5832D401CA400FED48A /* SignUpView.swift */; };
 		F7F6B5862D401D2600FED48A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5852D401D2600FED48A /* SignUpViewController.swift */; };
+		F7F6B58B2D40261B00FED48A /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B58A2D40261B00FED48A /* RadioButton.swift */; };
+		F7F6B58E2D402B4200FED48A /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B58D2D402B4200FED48A /* SignUpViewModel.swift */; };
+		F7F6B5912D402B9300FED48A /* SignUpScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */; };
+		F7F6B5932D4031BB00FED48A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5922D4031BB00FED48A /* CustomButton.swift */; };
+		F7F6B5972D414B1F00FED48A /* TextFieldWithErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */; };
+		F7F6B5992D41519000FED48A /* CustomUploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5982D41518F00FED48A /* CustomUploadButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +82,12 @@
 		F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		F7F6B5832D401CA400FED48A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		F7F6B5852D401D2600FED48A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F7F6B58A2D40261B00FED48A /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		F7F6B58D2D402B4200FED48A /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenBuilder.swift; sourceTree = "<group>"; };
+		F7F6B5922D4031BB00FED48A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithErrorView.swift; sourceTree = "<group>"; };
+		F7F6B5982D41518F00FED48A /* CustomUploadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUploadButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,7 +345,8 @@
 		F7F6B57A2D3EC69000FED48A /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
-				F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */,
+				F7F6B59B2D41547C00FED48A /* Button */,
+				F7F6B59A2D41546A00FED48A /* View */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -341,8 +354,10 @@
 		F7F6B57F2D401C6900FED48A /* SignUpModule */ = {
 			isa = PBXGroup;
 			children = (
+				F7F6B58C2D402B3100FED48A /* ViewModel */,
 				F7F6B5802D401C8000FED48A /* View */,
 				F7F6B5812D401C8800FED48A /* Controller */,
+				F7F6B58F2D402B6A00FED48A /* Helper */,
 			);
 			path = SignUpModule;
 			sourceTree = "<group>";
@@ -361,6 +376,41 @@
 				F7F6B5852D401D2600FED48A /* SignUpViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7F6B58C2D402B3100FED48A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B58D2D402B4200FED48A /* SignUpViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7F6B58F2D402B6A00FED48A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F7F6B59A2D41546A00FED48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */,
+				F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7F6B59B2D41547C00FED48A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B58A2D40261B00FED48A /* RadioButton.swift */,
+				F7F6B5922D4031BB00FED48A /* CustomButton.swift */,
+				F7F6B5982D41518F00FED48A /* CustomUploadButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,17 +496,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F6B5562D3C1C0200FED48A /* Dimension.swift in Sources */,
+				F7F6B5972D414B1F00FED48A /* TextFieldWithErrorView.swift in Sources */,
 				F7F6B5532D3C1BBC00FED48A /* CGFloat + Extension.swift in Sources */,
 				F7F6B5712D3D50B200FED48A /* UsersUI.swift in Sources */,
 				F7F6B5452D3C164100FED48A /* MainTableViewCell.swift in Sources */,
 				F7F6B5752D3D5DFF00FED48A /* MainEndpoint.swift in Sources */,
 				F7F6B55A2D3C1C1100FED48A /* Device.swift in Sources */,
+				F7F6B58E2D402B4200FED48A /* SignUpViewModel.swift in Sources */,
 				F7F6B5302D39714600FED48A /* MainViewModel.swift in Sources */,
 				F7F6B5472D3C17A600FED48A /* AppFonts.swift in Sources */,
 				F7F6B57C2D3EC6C900FED48A /* CustomHeaderView.swift in Sources */,
+				F7F6B58B2D40261B00FED48A /* RadioButton.swift in Sources */,
 				F7F6B56A2D3D4B4A00FED48A /* APIManager.swift in Sources */,
 				F7F6B52C2D39709A00FED48A /* BaseViewController.swift in Sources */,
 				F7F6B52E2D3970D500FED48A /* MainView.swift in Sources */,
+				F7F6B5992D41519000FED48A /* CustomUploadButton.swift in Sources */,
 				F7F6B5582D3C1C0900FED48A /* Helper.swift in Sources */,
 				F7F6B5732D3D5CDD00FED48A /* UIImageView + Extension.swift in Sources */,
 				F7F6B5412D3AA5CB00FED48A /* AppImages.swift in Sources */,
@@ -466,7 +520,9 @@
 				F7F6B50B2D396D9B00FED48A /* AppDelegate.swift in Sources */,
 				F7F6B5332D39717B00FED48A /* MainScreenBuilder.swift in Sources */,
 				F7F6B56F2D3D4FE700FED48A /* UserResponse.swift in Sources */,
+				F7F6B5932D4031BB00FED48A /* CustomButton.swift in Sources */,
 				F7F6B5432D3AA9D900FED48A /* AppColors.swift in Sources */,
+				F7F6B5912D402B9300FED48A /* SignUpScreenBuilder.swift in Sources */,
 				F7F6B53C2D3AA1B900FED48A /* TabBarCoordinator.swift in Sources */,
 				F7F6B56D2D3D4C1500FED48A /* Endpoint.swift in Sources */,
 				F7F6B5862D401D2600FED48A /* SignUpViewController.swift in Sources */,
