@@ -72,6 +72,8 @@ extension SignUpView {
     private func setupView() {
         backgroundColor = .white
         
+        emailFieldWithError.textField.autocapitalizationType = UITextAutocapitalizationType.none
+        
         phoneFieldWithError.errorLabel.text = "+38 (XXX) XXX - XX - XX"
         phoneFieldWithError.errorLabel.isHidden = false
         phoneFieldWithError.errorLabel.textColor = UIColor.lightGray

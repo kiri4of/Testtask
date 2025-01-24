@@ -16,6 +16,12 @@ enum APIResult<T> {
 
 protocol NetworkManagerProtocol {
     func sendRequest<T: Decodable>(request: URLRequestConvertible, completion: @escaping (APIResult<T>) -> Void)
+    
+    func uploadMultipart<T: Decodable> (
+        request: URLRequestConvertible,
+        formDataBuilder: @escaping ((MultipartFormData) -> Void),
+        completion: @escaping ((APIResult<T>) -> Void)
+    )
 }
 
 final class NetworkManager: NetworkManagerProtocol {
@@ -37,6 +43,28 @@ final class NetworkManager: NetworkManagerProtocol {
                 }
             }
     }
+    
+    func uploadMultipart<T>(request: Alamofire.URLRequestConvertible, formDataBuilder: @escaping ((Alamofire.MultipartFormData) -> Void), completion: @escaping ((APIResult<T>) -> Void)) where T : Decodable {
+        AF.upload(multipartFormData: formDataBuilder, with: request)
+            .validate()
+            .responseDecodable(of: T.self) { response in
+                switch response.result {
+                case .success(let decodedData):
+                    completion(.success(decodedData))
+                case .failure(let error):
+                    if let statusCode = response.response?.statusCode {
+                        if let error = self.processStatusCode(statusCode) {
+                            completion(.failure(error))
+                        } else {
+                            completion(.failure(APIError.unknownError(error.localizedDescription)))
+                        }
+                    } else {
+                        completion(.failure(APIError.unknownError(error.localizedDescription)))
+                    }
+                }
+            }
+    }
+    
     
     private func processStatusCode(_ statusCode: Int) -> APIError? {
         switch statusCode {

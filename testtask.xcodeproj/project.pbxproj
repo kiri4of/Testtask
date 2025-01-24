@@ -47,6 +47,10 @@
 		F7F6B5932D4031BB00FED48A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5922D4031BB00FED48A /* CustomButton.swift */; };
 		F7F6B5972D414B1F00FED48A /* TextFieldWithErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */; };
 		F7F6B5992D41519000FED48A /* UploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5982D41518F00FED48A /* UploadButton.swift */; };
+		F7F6B5A02D43EB3700FED48A /* SignUpEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B59F2D43EB3700FED48A /* SignUpEndpoint.swift */; };
+		F7F6B5A32D43F58300FED48A /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5A22D43F58300FED48A /* SignUpResponse.swift */; };
+		F7F6B5A62D44015000FED48A /* TokerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5A52D44015000FED48A /* TokerEndpoint.swift */; };
+		F7F6B5A82D44018000FED48A /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5A72D44018000FED48A /* TokenResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		F7F6B5922D4031BB00FED48A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithErrorView.swift; sourceTree = "<group>"; };
 		F7F6B5982D41518F00FED48A /* UploadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadButton.swift; sourceTree = "<group>"; };
+		F7F6B59F2D43EB3700FED48A /* SignUpEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEndpoint.swift; sourceTree = "<group>"; };
+		F7F6B5A22D43F58300FED48A /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		F7F6B5A52D44015000FED48A /* TokerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokerEndpoint.swift; sourceTree = "<group>"; };
+		F7F6B5A72D44018000FED48A /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +363,7 @@
 		F7F6B57F2D401C6900FED48A /* SignUpModule */ = {
 			isa = PBXGroup;
 			children = (
+				F7F6B5A12D43F57100FED48A /* Model */,
 				F7F6B58C2D402B3100FED48A /* ViewModel */,
 				F7F6B5802D401C8000FED48A /* View */,
 				F7F6B5812D401C8800FED48A /* Controller */,
@@ -390,7 +399,9 @@
 		F7F6B58F2D402B6A00FED48A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */,
+				F7F6B5A42D44013A00FED48A /* TokenEndpoint */,
+				F7F6B59D2D43EB1400FED48A /* SignUpEndpoint */,
+				F7F6B59E2D43EB2300FED48A /* Builder */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -419,6 +430,39 @@
 				F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F7F6B59D2D43EB1400FED48A /* SignUpEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B59F2D43EB3700FED48A /* SignUpEndpoint.swift */,
+			);
+			path = SignUpEndpoint;
+			sourceTree = "<group>";
+		};
+		F7F6B59E2D43EB2300FED48A /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		F7F6B5A12D43F57100FED48A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5A22D43F58300FED48A /* SignUpResponse.swift */,
+				F7F6B5A72D44018000FED48A /* TokenResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F7F6B5A42D44013A00FED48A /* TokenEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5A52D44015000FED48A /* TokerEndpoint.swift */,
+			);
+			path = TokenEndpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +549,7 @@
 			files = (
 				F7F6B5562D3C1C0200FED48A /* Dimension.swift in Sources */,
 				F7F6B5972D414B1F00FED48A /* TextFieldWithErrorView.swift in Sources */,
+				F7F6B5A32D43F58300FED48A /* SignUpResponse.swift in Sources */,
 				F7F6B5532D3C1BBC00FED48A /* CGFloat + Extension.swift in Sources */,
 				F7F6B5712D3D50B200FED48A /* UsersUI.swift in Sources */,
 				F7F6B5452D3C164100FED48A /* MainTableViewCell.swift in Sources */,
@@ -513,6 +558,7 @@
 				F7F6B58E2D402B4200FED48A /* SignUpViewModel.swift in Sources */,
 				F7F6B5302D39714600FED48A /* MainViewModel.swift in Sources */,
 				F7F6B5472D3C17A600FED48A /* AppFonts.swift in Sources */,
+				F7F6B5A02D43EB3700FED48A /* SignUpEndpoint.swift in Sources */,
 				F7F6B57C2D3EC6C900FED48A /* CustomHeaderView.swift in Sources */,
 				F7F6B58B2D40261B00FED48A /* RadioButton.swift in Sources */,
 				F7F6B56A2D3D4B4A00FED48A /* APIManager.swift in Sources */,
@@ -523,7 +569,9 @@
 				F7F6B5732D3D5CDD00FED48A /* UIImageView + Extension.swift in Sources */,
 				F7F6B5412D3AA5CB00FED48A /* AppImages.swift in Sources */,
 				F7F6B50F2D396D9B00FED48A /* MainViewController.swift in Sources */,
+				F7F6B5A82D44018000FED48A /* TokenResponse.swift in Sources */,
 				F7F6B5842D401CA400FED48A /* SignUpView.swift in Sources */,
+				F7F6B5A62D44015000FED48A /* TokerEndpoint.swift in Sources */,
 				F7F6B5622D3D46FF00FED48A /* NetworkManager.swift in Sources */,
 				F7F6B50B2D396D9B00FED48A /* AppDelegate.swift in Sources */,
 				F7F6B5332D39717B00FED48A /* MainScreenBuilder.swift in Sources */,

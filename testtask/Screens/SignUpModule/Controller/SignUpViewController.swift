@@ -3,6 +3,8 @@ import UIKit
 
 class SignUpViewController: BaseViewController<SignUpView> {
     private var viewModel: SignUpViewModel
+    //save user image
+    private var userSelectedImage: UIImage?
     
     init(mainView: SignUpView, viewModel: SignUpViewModel) {
         self.viewModel = viewModel
@@ -15,7 +17,7 @@ class SignUpViewController: BaseViewController<SignUpView> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupButtons()
+        bind()
     }
     
     //MARK: ImagePicker Setup
@@ -49,7 +51,7 @@ class SignUpViewController: BaseViewController<SignUpView> {
     }
     //MARK: Buttons Setup when Tapped
     
-    private func setupButtons() {
+    private func bind() {
         [mainView.frontendButton,mainView.backendButton,mainView.designerButton,mainView.qaButton].forEach { button in
             button.addTarget(self, action: #selector(radioButtonTapped(_:)), for: .touchUpInside)
         }
@@ -57,6 +59,21 @@ class SignUpViewController: BaseViewController<SignUpView> {
         
         mainView.uploadButton.onUploadTap = { [weak self] in
             self?.showImagePickerOptions()
+        }
+        
+        //When success
+        viewModel.onSignUpSucces = { [weak self] message in
+            let ac = UIAlertController(title: "Succes", message: message, preferredStyle: .alert)
+                      let ca = UIAlertAction(title: "OK", style: .default)
+                      ac.addAction(ca)
+            self?.present(ac,animated: true)
+        }
+        //When failure
+        viewModel.displayError = { [weak self] message in
+            let ac = UIAlertController(title: "Failure", message: message, preferredStyle: .alert)
+                      let ca = UIAlertAction(title: "OK", style: .default)
+                      ac.addAction(ca)
+            self?.present(ac,animated: true)
         }
         
         //binding text changing events
@@ -135,11 +152,26 @@ class SignUpViewController: BaseViewController<SignUpView> {
         }
         
         //If everything is okay => make request
-        if nameError == nil, emailError == nil, phoneError == nil, !(photoName?.isEmpty ?? true) {
-            let ac = UIAlertController(title: "Succes", message: "Yeahah", preferredStyle: .alert)
-            let ca = UIAlertAction(title: "OK", style: .default)
-            ac.addAction(ca)
-            present(ac,animated: true)
+        
+        viewModel.fetchToken { [weak self] in
+            guard let self = self else { return }
+            if nameError == nil, emailError == nil, phoneError == nil, !(photoName?.isEmpty ?? true) {
+                guard let userSelectedImage = userSelectedImage else {
+                    print("No image return")
+                    return
+                }
+                
+                guard let photoData = userSelectedImage.jpegData(compressionQuality: 0.8) else {
+                    print("Could not convert UIImage to Data")
+                    return
+                }
+                
+                viewModel.signUpUser(
+                    name: nameText ?? "",
+                    email: emailText ?? "",
+                    phone: phoneText ?? "",
+                    photoData: photoData)
+            }
         }
     }
 }
@@ -150,6 +182,7 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let pickedImage = info[.originalImage] as? UIImage {
+            userSelectedImage = pickedImage
             let fileName = "photo.jpg"
             //settig name for TextField inside uploadButton
             mainView.uploadButton.setImageName(fileName)
