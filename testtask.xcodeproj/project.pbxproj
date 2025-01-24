@@ -46,7 +46,7 @@
 		F7F6B5912D402B9300FED48A /* SignUpScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */; };
 		F7F6B5932D4031BB00FED48A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5922D4031BB00FED48A /* CustomButton.swift */; };
 		F7F6B5972D414B1F00FED48A /* TextFieldWithErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */; };
-		F7F6B5992D41519000FED48A /* CustomUploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5982D41518F00FED48A /* CustomUploadButton.swift */; };
+		F7F6B5992D41519000FED48A /* UploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5982D41518F00FED48A /* UploadButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +87,7 @@
 		F7F6B5902D402B9300FED48A /* SignUpScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreenBuilder.swift; sourceTree = "<group>"; };
 		F7F6B5922D4031BB00FED48A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithErrorView.swift; sourceTree = "<group>"; };
-		F7F6B5982D41518F00FED48A /* CustomUploadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUploadButton.swift; sourceTree = "<group>"; };
+		F7F6B5982D41518F00FED48A /* UploadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,7 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				F7F6B59B2D41547C00FED48A /* Button */,
-				F7F6B59A2D41546A00FED48A /* View */,
+				F7F6B59A2D41546A00FED48A /* TextField */,
+				F7F6B59C2D42DE1700FED48A /* View */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -394,13 +395,12 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		F7F6B59A2D41546A00FED48A /* View */ = {
+		F7F6B59A2D41546A00FED48A /* TextField */ = {
 			isa = PBXGroup;
 			children = (
 				F7F6B5962D414B1F00FED48A /* TextFieldWithErrorView.swift */,
-				F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */,
 			);
-			path = View;
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		F7F6B59B2D41547C00FED48A /* Button */ = {
@@ -408,9 +408,17 @@
 			children = (
 				F7F6B58A2D40261B00FED48A /* RadioButton.swift */,
 				F7F6B5922D4031BB00FED48A /* CustomButton.swift */,
-				F7F6B5982D41518F00FED48A /* CustomUploadButton.swift */,
+				F7F6B5982D41518F00FED48A /* UploadButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		F7F6B59C2D42DE1700FED48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B57B2D3EC6C900FED48A /* CustomHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,7 +518,7 @@
 				F7F6B56A2D3D4B4A00FED48A /* APIManager.swift in Sources */,
 				F7F6B52C2D39709A00FED48A /* BaseViewController.swift in Sources */,
 				F7F6B52E2D3970D500FED48A /* MainView.swift in Sources */,
-				F7F6B5992D41519000FED48A /* CustomUploadButton.swift in Sources */,
+				F7F6B5992D41519000FED48A /* UploadButton.swift in Sources */,
 				F7F6B5582D3C1C0900FED48A /* Helper.swift in Sources */,
 				F7F6B5732D3D5CDD00FED48A /* UIImageView + Extension.swift in Sources */,
 				F7F6B5412D3AA5CB00FED48A /* AppImages.swift in Sources */,
@@ -673,6 +681,7 @@
 				DEVELOPMENT_TEAM = N8L5F3M6C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testtask/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to capture photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -703,6 +712,7 @@
 				DEVELOPMENT_TEAM = N8L5F3M6C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testtask/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to capture photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;

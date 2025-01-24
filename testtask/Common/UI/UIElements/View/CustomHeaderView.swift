@@ -21,7 +21,9 @@ class CustomHeaderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+}
+
+extension CustomHeaderView {
     private func setupView() {
         addSubview(mainLabel)
         

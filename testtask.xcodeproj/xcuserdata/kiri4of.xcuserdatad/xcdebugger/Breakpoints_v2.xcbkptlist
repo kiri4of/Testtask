@@ -3,4 +3,293 @@
    uuid = "177C77D4-5CFE-4959-B9E5-41FD37A96773"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6AFAA43A-2F0B-4115-BCF7-3B4ECAE2D6CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Common/UI/UIElements/Button/CustomUploadButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "showErrorMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6C5B26F-F6DF-4018-8435-6FA9EF7AF7F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "didTapSignUpButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6C5B26F-F6DF-4018-8435-6FA9EF7AF7F2 - 9e62c428f0914462"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.didTapSignUpButton() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "1908">
+               </Location>
+               <Location
+                  uuid = "C6C5B26F-F6DF-4018-8435-6FA9EF7AF7F2 - 9e62c428f0915800"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.didTapSignUpButton() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "1917">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F72A6658-B7CF-4DA0-A2F5-88FEDF0A0E82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "didTapSignUpButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F72A6658-B7CF-4DA0-A2F5-88FEDF0A0E82 - 9e62c428f09145e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.didTapSignUpButton() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "2602">
+               </Location>
+               <Location
+                  uuid = "F72A6658-B7CF-4DA0-A2F5-88FEDF0A0E82 - 9e62c428f09145e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.didTapSignUpButton() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "2642">
+               </Location>
+               <Location
+                  uuid = "F72A6658-B7CF-4DA0-A2F5-88FEDF0A0E82 - 9e62c428f0915984"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.didTapSignUpButton() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "2651">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6365DDE-3234-43C7-9EBF-BC18B31240FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "updateSignUpButtonState()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A6365DDE-3234-43C7-9EBF-BC18B31240FC - 33375ac30ec9f4f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.updateSignUpButtonState() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2187">
+               </Location>
+               <Location
+                  uuid = "A6365DDE-3234-43C7-9EBF-BC18B31240FC - 33375ac30ec9f4f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewController.updateSignUpButtonState() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/Controller/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "2145">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2A0DA6C-0443-467A-AFDA-2DDF635AF2FD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "editingDidEnd()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A2A0DA6C-0443-467A-AFDA-2DDF635AF2FD - 10ac3aed19b34c68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.TextFieldWithErrorView.editingDidEnd() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "391">
+               </Location>
+               <Location
+                  uuid = "A2A0DA6C-0443-467A-AFDA-2DDF635AF2FD - 10ac3aed19b34c68"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.TextFieldWithErrorView.editingDidEnd() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4ADC27AC-040C-4411-9306-05566DDE615B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "editingDidEnd()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4ADC27AC-040C-4411-9306-05566DDE615B - 10ac3aed19b34c2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.TextFieldWithErrorView.editingDidEnd() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "646">
+               </Location>
+               <Location
+                  uuid = "4ADC27AC-040C-4411-9306-05566DDE615B - 10ac3aed19b34c2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.TextFieldWithErrorView.editingDidEnd() -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "549">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C05D0D5C-943C-41AE-BCD3-F69A4763FE8F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Common/UI/UIElements/TextField/TextFieldWithErrorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "editingDidBegin()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

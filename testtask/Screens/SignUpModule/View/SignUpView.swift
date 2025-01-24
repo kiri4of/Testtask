@@ -3,6 +3,10 @@ import SnapKit
 
 class SignUpView: UIView {
     
+    var uploadButtonFileName: String? {
+        return uploadButton.currentFileName
+    }
+    
     private let headerView = CustomHeaderView(title: "Working with POST request")
     
     private let scrollView: UIScrollView = {
@@ -14,9 +18,9 @@ class SignUpView: UIView {
     private let contentView = UIView()
     
     //MARK: - Custom Text Fields
-    private let nameFieldWithError = TextFieldWithErrorView(placeholder: "Your Name", errorMessage: "Required field",keyBoardType: .default)
-    private let emailFieldWithError = TextFieldWithErrorView(placeholder: "Email", errorMessage: "Invalid email format", keyBoardType: .emailAddress)
-    private let phoneFieldWithError = TextFieldWithErrorView(placeholder: "Phone", errorMessage: "Required field", keyBoardType: .phonePad)
+    let nameFieldWithError = TextFieldWithErrorView(placeholder: "Your Name", errorMessage: "Required field",keyBoardType: .default)
+    let emailFieldWithError = TextFieldWithErrorView(placeholder: "Email", errorMessage: "Invalid email format", keyBoardType: .emailAddress)
+    let phoneFieldWithError = TextFieldWithErrorView(placeholder: "Phone", errorMessage: "Required field", keyBoardType: .phonePad)
     
     private let positonLabel: UILabel = {
         let label = UILabel()
@@ -50,7 +54,7 @@ class SignUpView: UIView {
     
     let signUpButton = CustomButton(title: "Sign up", bgColor: AppColors.buttonBgColor, font: AppFonts.nunito18SemiBold)
     
-    private let uploadButton = CustomUploadButton(placeholder: "Upload your photo", errorMessage: "Photo is required")
+    let uploadButton = UploadButton(placeholder: "Upload your photo")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,8 +66,15 @@ class SignUpView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+}
+
+extension SignUpView {
     private func setupView() {
         backgroundColor = .white
+        
+        phoneFieldWithError.errorLabel.text = "+38 (XXX) XXX - XX - XX"
+        phoneFieldWithError.errorLabel.isHidden = false
+        phoneFieldWithError.errorLabel.textColor = UIColor.lightGray
         
         addSubview(headerView)
         addSubview(scrollView)
@@ -135,15 +146,13 @@ class SignUpView: UIView {
             make.bottom.equalToSuperview().offset(-16)
         }
     }
-}
-
-extension SignUpView {
-     private func setupGesture() {
-         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-         self.addGestureRecognizer(tapGesture)
-     }
-     
-     @objc private func hideKeyboard() {
-         self.endEditing(true)
-     }
+    
+    private func setupGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func hideKeyboard() {
+        self.endEditing(true)
+    }
 }

@@ -23,9 +23,6 @@ final class NetworkManager: NetworkManagerProtocol {
         AF.request(request)
             .validate()
             .responseDecodable(of: T.self) { response in
-                if let data = response.data, let str = String(data: data, encoding: .utf8) {
-                    print("Raw response: \n\(str)")
-                }
                 switch response.result {
                 case .success(let data):
                     completion(.success(data))

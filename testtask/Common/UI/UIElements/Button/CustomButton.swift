@@ -21,7 +21,7 @@ class CustomButton: UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
         titleLabel?.font = font
-        let cornerRadius = self.frame.height / 2.5
+        let cornerRadius = self.frame.height / 2
         layer.cornerRadius = cornerRadius 
     }
     
