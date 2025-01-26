@@ -17,27 +17,38 @@ class MainViewController: BaseViewController<MainView> {
         super.viewDidLoad()
         setupTableView()
         bindViewModel()
-        viewModel.fetchUsers()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.reloadUsers()
     }
     
     private func setupTableView() {
         mainView.tableView.dataSource = self
+        mainView.tableView.delegate = self
         mainView.tableView.register(MainTableViewCell.self, forCellReuseIdentifier: MainTableViewCell.identifier)
     }
     
     private func bindViewModel() {
         viewModel.updateMainScreenData = { [weak self] in
-            guard let self = self else {return}
+            guard let self = self else { return }
             DispatchQueue.main.async {
-                //if there no users
+
+                if self.viewModel.isLoading {
+                    return
+                }
+                
                 if self.viewModel.numberOfUsers() > 0 {
                     self.mainView.tableView.backgroundView = nil
+                    self.mainView.tableView.backgroundColor = .white
                 } else {
                     let imageView = UIImageView(image: UIImage(named: "noNetworkBgImage"))
                     imageView.contentMode = .scaleAspectFit
                     self.mainView.tableView.backgroundView = imageView
                 }
-                self.mainView.tableView.reloadData()
+                UIView.performWithoutAnimation {
+                    self.mainView.tableView.reloadData()
+                }
             }
         }
         
@@ -58,7 +69,7 @@ class MainViewController: BaseViewController<MainView> {
 }
 
 //MARK: - TableView DataSource
-extension MainViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfUsers()
     }
@@ -73,4 +84,12 @@ extension MainViewController: UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let totalCount = viewModel.numberOfUsers()
+        if indexPath.row == totalCount - 1 {
+            viewModel.fetchUsers()
+        }
+    }
+    
 }

@@ -5,6 +5,7 @@ class SignUpViewController: BaseViewController<SignUpView> {
     private var viewModel: SignUpViewModel
     //save user image
     private var userSelectedImage: UIImage?
+    private var radioButtons: [RadioButton] = []
     
     init(mainView: SignUpView, viewModel: SignUpViewModel) {
         self.viewModel = viewModel
@@ -18,6 +19,7 @@ class SignUpViewController: BaseViewController<SignUpView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        viewModel.fetchPositions()
     }
     
     //MARK: ImagePicker Setup
@@ -52,9 +54,10 @@ class SignUpViewController: BaseViewController<SignUpView> {
     //MARK: Buttons Setup when Tapped
     
     private func bind() {
-        [mainView.frontendButton,mainView.backendButton,mainView.designerButton,mainView.qaButton].forEach { button in
-            button.addTarget(self, action: #selector(radioButtonTapped(_:)), for: .touchUpInside)
+        viewModel.updatePositions = { [weak self] in
+                   self?.setupRadioButtons()
         }
+        
         mainView.signUpButton.addTarget(self, action: #selector(didTapSignUpButton), for: .touchUpInside)
         
         mainView.uploadButton.onUploadTap = { [weak self] in
@@ -63,17 +66,18 @@ class SignUpViewController: BaseViewController<SignUpView> {
         
         //When success
         viewModel.onSignUpSucces = { [weak self] message in
-            let ac = UIAlertController(title: "Succes", message: message, preferredStyle: .alert)
-                      let ca = UIAlertAction(title: "OK", style: .default)
-                      ac.addAction(ca)
-            self?.present(ac,animated: true)
+            
+                let vc = InfoScreenViewController(screenType: .success)
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc,animated: true)
+            
         }
         //When failure
         viewModel.displayError = { [weak self] message in
-            let ac = UIAlertController(title: "Failure", message: message, preferredStyle: .alert)
-                      let ca = UIAlertAction(title: "OK", style: .default)
-                      ac.addAction(ca)
-            self?.present(ac,animated: true)
+                let vc = InfoScreenViewController(screenType: .failure)
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc,animated: true)
+            
         }
         
         //binding text changing events
@@ -93,7 +97,6 @@ class SignUpViewController: BaseViewController<SignUpView> {
         updateSignUpButtonState()
     }
     
-    
     private func updateSignUpButtonState() {
         let nameText = mainView.nameFieldWithError.textField.text ?? ""
         let emailText = mainView.emailFieldWithError.textField.text ?? ""
@@ -112,22 +115,42 @@ class SignUpViewController: BaseViewController<SignUpView> {
         mainView.signUpButton.alpha = allFilled ? 1.0 : 0.5
     }
     
+    
+    private func setupRadioButtons() {
+           // delete all subviews
+           mainView.positionVerticalStackView.arrangedSubviews.forEach {
+               $0.removeFromSuperview()
+           }
+           radioButtons.removeAll()
+           
+           // list of positions from viewModel
+           let positions = viewModel.positionsList
+           
+           for position in positions {
+               let button = RadioButton(title: position.name)
+               // save id in button.tag
+               button.tag = position.id
+               button.addTarget(self, action: #selector(radioButtonTapped(_:)), for: .touchUpInside)
+               
+               radioButtons.append(button)
+               mainView.positionVerticalStackView.addArrangedSubview(button)
+           }
+        //first pos selected by default
+            if !radioButtons.isEmpty {
+                radioButtons[0].isSelected = true
+                viewModel.selectedPositionId = radioButtons[0].tag
+            }
+       }
+    
+    
     @objc private func radioButtonTapped(_ sender: RadioButton) {
-        mainView.frontendButton.isSelected = (sender == mainView.frontendButton)
-        mainView.backendButton.isSelected = (sender == mainView.backendButton)
-        mainView.designerButton.isSelected = (sender == mainView.designerButton)
-        mainView.qaButton.isSelected = (sender == mainView.qaButton)
-        
-        if sender == mainView.frontendButton {
-            viewModel.selectedPosition = .frontend
-        } else if sender == mainView.backendButton {
-            viewModel.selectedPosition = .backend
-        } else if sender == mainView.designerButton {
-            viewModel.selectedPosition = .designer
-        } else if sender == mainView.qaButton {
-            viewModel.selectedPosition = .qa
-        }
-    }
+         //unselect everyone
+         radioButtons.forEach { $0.isSelected = false }
+         //Mark selected only just chosen button
+         sender.isSelected = true
+         //save to VM chosen tag
+         viewModel.selectedPositionId = sender.tag
+     }
     
     @objc private func didTapSignUpButton() {
         let nameText = mainView.nameFieldWithError.textField.text
@@ -151,8 +174,7 @@ class SignUpViewController: BaseViewController<SignUpView> {
             mainView.uploadButton.showErrorMessage(nil)
         }
         
-        //If everything is okay => make request
-        
+        //first token
         viewModel.fetchToken { [weak self] in
             guard let self = self else { return }
             if nameError == nil, emailError == nil, phoneError == nil, !(photoName?.isEmpty ?? true) {
@@ -165,7 +187,7 @@ class SignUpViewController: BaseViewController<SignUpView> {
                     print("Could not convert UIImage to Data")
                     return
                 }
-                
+                //then request
                 viewModel.signUpUser(
                     name: nameText ?? "",
                     email: emailText ?? "",
@@ -197,3 +219,4 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
         picker.dismiss(animated: true)
     }
 }
+

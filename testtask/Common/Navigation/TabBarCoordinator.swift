@@ -7,7 +7,6 @@ class TabBarCoordinator {
     func start() {
         let mainVC = MainScreenBuilder.createMainViewController()
         let signUpVC = SignUpScreenBuilder.createSignUpViewController()
-
         
         //icons
         mainVC.tabBarItem = UITabBarItem(title: "", image: AppImages.users, tag: 0)
@@ -19,8 +18,6 @@ class TabBarCoordinator {
         tabBarController.tabBar.tintColor = AppColors.tabBarTintColor
         tabBarController.tabBar.isTranslucent = false
         tabBarController.tabBar.backgroundColor = AppColors.tabBarBgColor
-        
-        
     }
     
 }

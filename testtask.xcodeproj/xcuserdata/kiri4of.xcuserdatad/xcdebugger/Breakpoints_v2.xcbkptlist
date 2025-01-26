@@ -23,69 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1941F118-688B-48C0-A2ED-4CF017D8AF0D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1941F118-688B-48C0-A2ED-4CF017D8AF0D - 96a9f536d1fcc767"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "testtask.SignUpViewModel.signUpUser(name: Swift.String, email: Swift.String, phone: Swift.String, photoData: Foundation.Data, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
-                  moduleName = "testtask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "438">
-               </Location>
-               <Location
-                  uuid = "1941F118-688B-48C0-A2ED-4CF017D8AF0D - d37e08527922e6cf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.MultipartFormData) -&gt; () in testtask.SignUpViewModel.signUpUser(name: Swift.String, email: Swift.String, phone: Swift.String, photoData: Foundation.Data, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
-                  moduleName = "testtask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "299">
-               </Location>
-               <Location
-                  uuid = "1941F118-688B-48C0-A2ED-4CF017D8AF0D - 96a9f536d1fcc767"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "testtask.SignUpViewModel.signUpUser(name: Swift.String, email: Swift.String, phone: Swift.String, photoData: Foundation.Data, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
-                  moduleName = "testtask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "1362">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "34C5758F-074E-439E-BA26-C04054F83C8C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -93,8 +30,8 @@
             filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -109,8 +46,8 @@
             filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
             landmarkType = "7">
             <Locations>
@@ -172,8 +109,8 @@
             filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
             landmarkType = "7">
             <Locations>

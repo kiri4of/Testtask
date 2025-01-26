@@ -6,11 +6,12 @@ class MainView: UIView {
     let tableView: UITableView = {
     var table = UITableView()
         table.separatorStyle = .singleLine
+        table.backgroundColor = .white
         table.showsVerticalScrollIndicator = false
     return table
     }()
     
-    private let headerView = CustomHeaderView(title: "Workng with GET request")
+    private let headerView = CustomHeaderView(title: "Working with GET request")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

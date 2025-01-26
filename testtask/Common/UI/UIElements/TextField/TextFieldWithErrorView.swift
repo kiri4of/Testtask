@@ -19,7 +19,7 @@ class TextFieldWithErrorView: UIView {
             label.isHidden = true
             return label
         }()
-    
+     
     var onTextChanged: ((String?) -> Void)?
     
     init(placeholder: String, errorMessage: String, keyBoardType: UIKeyboardType) {
@@ -52,6 +52,7 @@ class TextFieldWithErrorView: UIView {
 
 extension TextFieldWithErrorView {
     private func setupView() {
+        
         addSubview(textField)
         addSubview(errorLabel)
         

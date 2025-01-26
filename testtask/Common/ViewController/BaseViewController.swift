@@ -1,6 +1,6 @@
 
 import UIKit
-
+// our view controllers foundation
 class BaseViewController<View: UIView>: UIViewController {
     var mainView: View
     

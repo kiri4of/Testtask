@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F74244D92D45630A001FB5B0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F74244D82D45630A001FB5B0 /* SnapKit */; };
+		F74244E42D457D9E001FB5B0 /* InfoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74244E32D457D9E001FB5B0 /* InfoScreenView.swift */; };
+		F74244E82D457E6C001FB5B0 /* InfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74244E72D457E6C001FB5B0 /* InfoScreen.swift */; };
+		F74244EB2D458844001FB5B0 /* NoInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74244EA2D458844001FB5B0 /* NoInternetViewController.swift */; };
+		F7BA876C2D45BDC300A4AA2A /* NoInternetScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA876B2D45BDC300A4AA2A /* NoInternetScreenBuilder.swift */; };
+		F7BA87732D45CE0C00A4AA2A /* PositionsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA87722D45CE0C00A4AA2A /* PositionsEndpoint.swift */; };
+		F7BA87752D45CE4D00A4AA2A /* PositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA87742D45CE4D00A4AA2A /* PositionModel.swift */; };
 		F7F6B50B2D396D9B00FED48A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B50A2D396D9B00FED48A /* AppDelegate.swift */; };
 		F7F6B50D2D396D9B00FED48A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B50C2D396D9B00FED48A /* SceneDelegate.swift */; };
 		F7F6B50F2D396D9B00FED48A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B50E2D396D9B00FED48A /* MainViewController.swift */; };
@@ -16,8 +23,6 @@
 		F7F6B52E2D3970D500FED48A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B52D2D3970D500FED48A /* MainView.swift */; };
 		F7F6B5302D39714600FED48A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B52F2D39714600FED48A /* MainViewModel.swift */; };
 		F7F6B5332D39717B00FED48A /* MainScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5322D39717B00FED48A /* MainScreenBuilder.swift */; };
-		F7F6B5382D3A9E4E00FED48A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F7F6B5372D3A9E4E00FED48A /* SnapKit */; };
-		F7F6B53A2D3A9E4E00FED48A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F7F6B5392D3A9E4E00FED48A /* SnapKit-Dynamic */; };
 		F7F6B53C2D3AA1B900FED48A /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B53B2D3AA1B900FED48A /* TabBarCoordinator.swift */; };
 		F7F6B5412D3AA5CB00FED48A /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5402D3AA5CB00FED48A /* AppImages.swift */; };
 		F7F6B5432D3AA9D900FED48A /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5422D3AA9D900FED48A /* AppColors.swift */; };
@@ -31,7 +36,6 @@
 		F7F6B55A2D3C1C1100FED48A /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5592D3C1C1100FED48A /* Device.swift */; };
 		F7F6B5622D3D46FF00FED48A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5612D3D46FF00FED48A /* NetworkManager.swift */; };
 		F7F6B5652D3D472400FED48A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F7F6B5642D3D472400FED48A /* Alamofire */; };
-		F7F6B5672D3D472400FED48A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = F7F6B5662D3D472400FED48A /* AlamofireDynamic */; };
 		F7F6B56A2D3D4B4A00FED48A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5692D3D4B4A00FED48A /* APIManager.swift */; };
 		F7F6B56D2D3D4C1500FED48A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B56C2D3D4C1500FED48A /* Endpoint.swift */; };
 		F7F6B56F2D3D4FE700FED48A /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B56E2D3D4FE700FED48A /* UserResponse.swift */; };
@@ -51,9 +55,30 @@
 		F7F6B5A32D43F58300FED48A /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5A22D43F58300FED48A /* SignUpResponse.swift */; };
 		F7F6B5A62D44015000FED48A /* TokerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5A52D44015000FED48A /* TokerEndpoint.swift */; };
 		F7F6B5A82D44018000FED48A /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5A72D44018000FED48A /* TokenResponse.swift */; };
+		F7F6B5AD2D45355100FED48A /* InfoScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5AC2D45355100FED48A /* InfoScreenViewController.swift */; };
+		F7F6B5AF2D45358800FED48A /* NoInternetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F6B5AE2D45358800FED48A /* NoInternetView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F74244D72D4562F8001FB5B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F74244E32D457D9E001FB5B0 /* InfoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenView.swift; sourceTree = "<group>"; };
+		F74244E72D457E6C001FB5B0 /* InfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreen.swift; sourceTree = "<group>"; };
+		F74244EA2D458844001FB5B0 /* NoInternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetViewController.swift; sourceTree = "<group>"; };
+		F7BA876B2D45BDC300A4AA2A /* NoInternetScreenBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoInternetScreenBuilder.swift; sourceTree = "<group>"; };
+		F7BA87722D45CE0C00A4AA2A /* PositionsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionsEndpoint.swift; sourceTree = "<group>"; };
+		F7BA87742D45CE4D00A4AA2A /* PositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionModel.swift; sourceTree = "<group>"; };
 		F7F6B5072D396D9B00FED48A /* testtask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testtask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F6B50A2D396D9B00FED48A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7F6B50C2D396D9B00FED48A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +121,8 @@
 		F7F6B5A22D43F58300FED48A /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
 		F7F6B5A52D44015000FED48A /* TokerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokerEndpoint.swift; sourceTree = "<group>"; };
 		F7F6B5A72D44018000FED48A /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		F7F6B5AC2D45355100FED48A /* InfoScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScreenViewController.swift; sourceTree = "<group>"; };
+		F7F6B5AE2D45358800FED48A /* NoInternetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,21 +130,69 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74244D92D45630A001FB5B0 /* SnapKit in Frameworks */,
 				F7F6B5652D3D472400FED48A /* Alamofire in Frameworks */,
-				F7F6B5672D3D472400FED48A /* AlamofireDynamic in Frameworks */,
-				F7F6B5382D3A9E4E00FED48A /* SnapKit in Frameworks */,
-				F7F6B53A2D3A9E4E00FED48A /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F74244D32D4562F8001FB5B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7BA876A2D45BD4400A4AA2A /* NoInternetModule */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA876F2D45BDEC00A4AA2A /* Helper */,
+				F7BA876E2D45BDE300A4AA2A /* Controller */,
+				F7BA876D2D45BDDA00A4AA2A /* View */,
+			);
+			path = NoInternetModule;
+			sourceTree = "<group>";
+		};
+		F7BA876D2D45BDDA00A4AA2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5AE2D45358800FED48A /* NoInternetView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7BA876E2D45BDE300A4AA2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F74244EA2D458844001FB5B0 /* NoInternetViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7BA876F2D45BDEC00A4AA2A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA876B2D45BDC300A4AA2A /* NoInternetScreenBuilder.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F7BA87702D45CDC000A4AA2A /* PositionsEndpoint */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA87722D45CE0C00A4AA2A /* PositionsEndpoint.swift */,
+			);
+			path = PositionsEndpoint;
+			sourceTree = "<group>";
+		};
 		F7F6B4FE2D396D9B00FED48A = {
 			isa = PBXGroup;
 			children = (
 				F7F6B5092D396D9B00FED48A /* testtask */,
 				F7F6B5082D396D9B00FED48A /* Products */,
+				F74244D32D4562F8001FB5B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +235,8 @@
 		F7F6B5212D396F6800FED48A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F7BA876A2D45BD4400A4AA2A /* NoInternetModule */,
+				F7F6B5A92D45351800FED48A /* InfoModule */,
 				F7F6B57F2D401C6900FED48A /* SignUpModule */,
 				F7F6B5252D396FF800FED48A /* MainModule */,
 			);
@@ -214,6 +291,7 @@
 		F7F6B5312D39716600FED48A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				F7BA87702D45CDC000A4AA2A /* PositionsEndpoint */,
 				F7F6B5772D3D62E400FED48A /* Builder */,
 				F7F6B5782D3D62EE00FED48A /* MainEndpoint */,
 			);
@@ -280,6 +358,7 @@
 			children = (
 				F7F6B56E2D3D4FE700FED48A /* UserResponse.swift */,
 				F7F6B5702D3D50B200FED48A /* UsersUI.swift */,
+				F7BA87742D45CE4D00A4AA2A /* PositionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -465,6 +544,40 @@
 			path = TokenEndpoint;
 			sourceTree = "<group>";
 		};
+		F7F6B5A92D45351800FED48A /* InfoModule */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5AA2D45352C00FED48A /* View */,
+				F7F6B5AB2D45353800FED48A /* Controller */,
+				F7F6B5B02D454BC900FED48A /* Helper */,
+			);
+			path = InfoModule;
+			sourceTree = "<group>";
+		};
+		F7F6B5AA2D45352C00FED48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F74244E32D457D9E001FB5B0 /* InfoScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7F6B5AB2D45353800FED48A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7F6B5AC2D45355100FED48A /* InfoScreenViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F7F6B5B02D454BC900FED48A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F74244E72D457E6C001FB5B0 /* InfoScreen.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -475,6 +588,7 @@
 				F7F6B5032D396D9B00FED48A /* Sources */,
 				F7F6B5042D396D9B00FED48A /* Frameworks */,
 				F7F6B5052D396D9B00FED48A /* Resources */,
+				F74244D72D4562F8001FB5B0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -482,10 +596,8 @@
 			);
 			name = testtask;
 			packageProductDependencies = (
-				F7F6B5372D3A9E4E00FED48A /* SnapKit */,
-				F7F6B5392D3A9E4E00FED48A /* SnapKit-Dynamic */,
 				F7F6B5642D3D472400FED48A /* Alamofire */,
-				F7F6B5662D3D472400FED48A /* AlamofireDynamic */,
+				F74244D82D45630A001FB5B0 /* SnapKit */,
 			);
 			productName = testtask;
 			productReference = F7F6B5072D396D9B00FED48A /* testtask.app */;
@@ -549,6 +661,7 @@
 			files = (
 				F7F6B5562D3C1C0200FED48A /* Dimension.swift in Sources */,
 				F7F6B5972D414B1F00FED48A /* TextFieldWithErrorView.swift in Sources */,
+				F7F6B5AD2D45355100FED48A /* InfoScreenViewController.swift in Sources */,
 				F7F6B5A32D43F58300FED48A /* SignUpResponse.swift in Sources */,
 				F7F6B5532D3C1BBC00FED48A /* CGFloat + Extension.swift in Sources */,
 				F7F6B5712D3D50B200FED48A /* UsersUI.swift in Sources */,
@@ -557,25 +670,32 @@
 				F7F6B55A2D3C1C1100FED48A /* Device.swift in Sources */,
 				F7F6B58E2D402B4200FED48A /* SignUpViewModel.swift in Sources */,
 				F7F6B5302D39714600FED48A /* MainViewModel.swift in Sources */,
+				F74244E82D457E6C001FB5B0 /* InfoScreen.swift in Sources */,
 				F7F6B5472D3C17A600FED48A /* AppFonts.swift in Sources */,
 				F7F6B5A02D43EB3700FED48A /* SignUpEndpoint.swift in Sources */,
 				F7F6B57C2D3EC6C900FED48A /* CustomHeaderView.swift in Sources */,
 				F7F6B58B2D40261B00FED48A /* RadioButton.swift in Sources */,
 				F7F6B56A2D3D4B4A00FED48A /* APIManager.swift in Sources */,
 				F7F6B52C2D39709A00FED48A /* BaseViewController.swift in Sources */,
+				F74244EB2D458844001FB5B0 /* NoInternetViewController.swift in Sources */,
 				F7F6B52E2D3970D500FED48A /* MainView.swift in Sources */,
 				F7F6B5992D41519000FED48A /* UploadButton.swift in Sources */,
 				F7F6B5582D3C1C0900FED48A /* Helper.swift in Sources */,
 				F7F6B5732D3D5CDD00FED48A /* UIImageView + Extension.swift in Sources */,
 				F7F6B5412D3AA5CB00FED48A /* AppImages.swift in Sources */,
+				F7F6B5AF2D45358800FED48A /* NoInternetView.swift in Sources */,
 				F7F6B50F2D396D9B00FED48A /* MainViewController.swift in Sources */,
 				F7F6B5A82D44018000FED48A /* TokenResponse.swift in Sources */,
 				F7F6B5842D401CA400FED48A /* SignUpView.swift in Sources */,
 				F7F6B5A62D44015000FED48A /* TokerEndpoint.swift in Sources */,
+				F7BA876C2D45BDC300A4AA2A /* NoInternetScreenBuilder.swift in Sources */,
+				F7BA87732D45CE0C00A4AA2A /* PositionsEndpoint.swift in Sources */,
 				F7F6B5622D3D46FF00FED48A /* NetworkManager.swift in Sources */,
 				F7F6B50B2D396D9B00FED48A /* AppDelegate.swift in Sources */,
 				F7F6B5332D39717B00FED48A /* MainScreenBuilder.swift in Sources */,
 				F7F6B56F2D3D4FE700FED48A /* UserResponse.swift in Sources */,
+				F74244E42D457D9E001FB5B0 /* InfoScreenView.swift in Sources */,
+				F7BA87752D45CE4D00A4AA2A /* PositionModel.swift in Sources */,
 				F7F6B5932D4031BB00FED48A /* CustomButton.swift in Sources */,
 				F7F6B5432D3AA9D900FED48A /* AppColors.swift in Sources */,
 				F7F6B5912D402B9300FED48A /* SignUpScreenBuilder.swift in Sources */,
@@ -729,11 +849,11 @@
 				DEVELOPMENT_TEAM = N8L5F3M6C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testtask/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to capture photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -760,11 +880,11 @@
 				DEVELOPMENT_TEAM = N8L5F3M6C5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testtask/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses camera to capture photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -824,25 +944,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F7F6B5372D3A9E4E00FED48A /* SnapKit */ = {
+		F74244D82D45630A001FB5B0 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F7F6B5362D3A9E4E00FED48A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		F7F6B5392D3A9E4E00FED48A /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F7F6B5362D3A9E4E00FED48A /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		F7F6B5642D3D472400FED48A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F7F6B5632D3D472400FED48A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		F7F6B5662D3D472400FED48A /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F7F6B5632D3D472400FED48A /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

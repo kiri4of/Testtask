@@ -30,7 +30,7 @@ class SignUpView: UIView {
         return label
     }()
     
-    private let positionVerticalStackView: UIStackView = {
+    let positionVerticalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 12
@@ -47,10 +47,6 @@ class SignUpView: UIView {
     }()
     
     //MARK: - Buttons
-    let frontendButton = RadioButton(title: "Frontend developer")
-    let backendButton = RadioButton(title: "Backend developer")
-    let designerButton = RadioButton(title: "Designer")
-    let qaButton = RadioButton(title: "QA")
     
     let signUpButton = CustomButton(title: "Sign up", bgColor: AppColors.buttonBgColor, font: AppFonts.nunito18SemiBold)
     
@@ -70,14 +66,6 @@ class SignUpView: UIView {
 
 extension SignUpView {
     private func setupView() {
-        backgroundColor = .white
-        
-        emailFieldWithError.textField.autocapitalizationType = UITextAutocapitalizationType.none
-        
-        phoneFieldWithError.errorLabel.text = "+38 (XXX) XXX - XX - XX"
-        phoneFieldWithError.errorLabel.isHidden = false
-        phoneFieldWithError.errorLabel.textColor = UIColor.lightGray
-        
         addSubview(headerView)
         addSubview(scrollView)
         scrollView.addSubview(contentView)
@@ -92,12 +80,20 @@ extension SignUpView {
         textFieldsVerticalStackView.addArrangedSubview(emailFieldWithError)
         textFieldsVerticalStackView.addArrangedSubview(phoneFieldWithError)
         
-        positionVerticalStackView.addArrangedSubview(frontendButton)
-        positionVerticalStackView.addArrangedSubview(backendButton)
-        positionVerticalStackView.addArrangedSubview(designerButton)
-        positionVerticalStackView.addArrangedSubview(qaButton)
-        
         setupConstraints()
+        configureUI()
+    }
+    
+    private func configureUI() {
+        backgroundColor = .white
+        
+        
+        emailFieldWithError.textField.autocapitalizationType = UITextAutocapitalizationType.none
+        
+        phoneFieldWithError.errorLabel.text = "+38 (XXX) XXX - XX - XX"
+        phoneFieldWithError.errorLabel.isHidden = false
+        phoneFieldWithError.errorLabel.textColor = UIColor.lightGray
+        
     }
     
     private func setupConstraints() {

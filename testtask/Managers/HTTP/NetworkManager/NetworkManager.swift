@@ -15,8 +15,9 @@ enum APIResult<T> {
 }
 
 protocol NetworkManagerProtocol {
+    //get
     func sendRequest<T: Decodable>(request: URLRequestConvertible, completion: @escaping (APIResult<T>) -> Void)
-    
+    //post
     func uploadMultipart<T: Decodable> (
         request: URLRequestConvertible,
         formDataBuilder: @escaping ((MultipartFormData) -> Void),
@@ -77,6 +78,7 @@ final class NetworkManager: NetworkManagerProtocol {
         }
     }
 }
+
 
 extension APIError {
     var displayMessage: String {

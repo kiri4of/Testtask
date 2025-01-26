@@ -1,17 +1,11 @@
 
 import Foundation
 
-enum Position: String {
-    case frontend = "Frontend developer"
-    case backend = "Backend developer"
-    case designer = "Designer"
-    case qa = "QA"
-}
-
 class SignUpViewModel {
     //typealias for model name
     typealias SignUpResult = APIResult<SignUpResponse>
     typealias TokenResult = APIResult<TokenResponse>
+    typealias PositionResult = APIResult<PositionsResponse>
     
     private let network: APIManagerProtocol
     
@@ -20,11 +14,14 @@ class SignUpViewModel {
     
     private var token: String?
     
-    var selectedPosition: Position? {
-          didSet {
-              print("Selected position updated to: \(selectedPosition?.rawValue ?? "None")")
-          }
-      }
+    // Список позиций, полученный с сервера
+    var positionsList: [PositionAPI] = []
+    
+    // Выбранный ID позиции
+    var selectedPositionId: Int?
+    
+    // Колбэк, чтобы контроллер мог знать, что positionsList обновился
+    var updatePositions: (() -> Void)?
     
     init(network: APIManagerProtocol) {
         self.network = network
@@ -39,13 +36,13 @@ class SignUpViewModel {
             displayError?("No token found. Fetch the token first")
             return
         }
-    
-        guard let position = selectedPosition else {
+        
+        guard let positionId = selectedPositionId else {
             displayError?("No position selected!")
             return
         }
         //converting position Id
-        let positionId = positionIdFromEnum(position)
+        // let positionId = positionIdFromEnum(position)
         
         let endPoint = SignUpEndpoint.createUser(token: token)
         
@@ -54,7 +51,7 @@ class SignUpViewModel {
             formData.append(email.data(using: .utf8) ?? Data(), withName: "email")
             formData.append(phone.data(using: .utf8) ?? Data(), withName: "phone")
             formData.append("\(positionId)".data(using: .utf8) ?? Data(), withName: "position_id")
-                        
+            
             formData.append(photoData,
                             withName: "photo",
                             fileName: "photo.jpg",
@@ -80,7 +77,7 @@ class SignUpViewModel {
                 self.token = nil
             }
         }
-
+        
     }
     
     func fetchToken(completion: @escaping () -> Void) {
@@ -96,6 +93,19 @@ class SignUpViewModel {
                 }
             case .failure(let error):
                 self.displayError?(error.localizedDescription)
+            }
+        }
+    }
+    
+    func fetchPositions() {
+        network.makeRequest(for: PositionsEndpoint.getPositions) { (result: PositionResult) in
+            switch result {
+            case .success(let response):
+                let positions = response.positions
+                self.positionsList = positions
+                self.updatePositions?()
+            case .failure(let error):
+                self.displayError?(error.displayMessage)
             }
         }
     }
@@ -139,12 +149,4 @@ class SignUpViewModel {
         return predicate.evaluate(with: phone)
     }
     
-    private func positionIdFromEnum(_ position: Position) -> Int {
-        switch position {
-        case .frontend: return 1
-        case .backend: return 2
-        case .designer: return 3
-        case .qa: return 4
-        }
-    }
 }

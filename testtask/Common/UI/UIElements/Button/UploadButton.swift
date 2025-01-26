@@ -70,6 +70,7 @@ class UploadButton: UIView {
 extension UploadButton {
     
     private func setupView() {
+       
         addSubview(textField)
         addSubview(errorLabel)
         
@@ -80,6 +81,8 @@ extension UploadButton {
       
         textField.rightView = uploadButton
         textField.rightViewMode = .always
+        
+        textField.delegate = self
         
         uploadButton.addTarget(self, action: #selector(didTapUploadButton), for: .touchUpInside)
         
@@ -106,3 +109,9 @@ extension UploadButton {
 
 
 
+
+extension UploadButton: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        return false
+    }
+}
