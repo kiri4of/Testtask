@@ -220,3 +220,5 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
 }
 
+
+//readme заполнить и мб блики авок фиксануть
