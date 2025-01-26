@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "177C77D4-5CFE-4959-B9E5-41FD37A96773"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6AFAA43A-2F0B-4115-BCF7-3B4ECAE2D6CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Common/UI/UIElements/Button/CustomUploadButton.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "showErrorMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34C5758F-074E-439E-BA26-C04054F83C8C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CE36D20-AC8C-4C19-B438-1C1A921753BE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1CE36D20-AC8C-4C19-B438-1C1A921753BE - 3a368b8a911797"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewModel.validate(name: Swift.Optional&lt;Swift.String&gt;, email: Swift.Optional&lt;Swift.String&gt;, phone: Swift.Optional&lt;Swift.String&gt;) -&gt; (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  uuid = "1CE36D20-AC8C-4C19-B438-1C1A921753BE - 3a368b8a911797"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewModel.validate(name: Swift.Optional&lt;Swift.String&gt;, email: Swift.Optional&lt;Swift.String&gt;, phone: Swift.Optional&lt;Swift.String&gt;) -&gt; (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "342">
+               </Location>
+               <Location
+                  uuid = "1CE36D20-AC8C-4C19-B438-1C1A921753BE - 511ecb6685bc822d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (testtask.APIResult&lt;testtask.SignUpResponse&gt;) -&gt; () in testtask.SignUpViewModel.signUpUser(name: Swift.String, email: Swift.String, phone: Swift.String, photoData: Foundation.Data, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "1041">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D65D3752-6E42-4A27-88BB-AE4D8C5A5826"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "signUpUser(name:email:phone:photoData:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D65D3752-6E42-4A27-88BB-AE4D8C5A5826 - 3a368b8a911734"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "testtask.SignUpViewModel.validate(name: Swift.Optional&lt;Swift.String&gt;, email: Swift.Optional&lt;Swift.String&gt;, phone: Swift.Optional&lt;Swift.String&gt;) -&gt; (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.String&gt;)"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "397">
+               </Location>
+               <Location
+                  uuid = "D65D3752-6E42-4A27-88BB-AE4D8C5A5826 - 511ecb6685bc83d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (testtask.APIResult&lt;testtask.SignUpResponse&gt;) -&gt; () in testtask.SignUpViewModel.signUpUser(name: Swift.String, email: Swift.String, phone: Swift.String, photoData: Foundation.Data, completion: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "testtask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/TestApps/testtask/testtask/Screens/SignUpModule/ViewModel/SignUpViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "1400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
